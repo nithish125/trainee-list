@@ -1,45 +1,98 @@
-var tablearea = document.getElementById('tablearea');
-
 var table = document.createElement('table');
-table.setAttribute("class", "bor")
-var tr = [];
-var td = []
-for (i = 0; i < 5; i++) {
-    tr[i] = document.createElement("tr")
-    for (j = 0; j < 8; j++) {
-        td[j] = document.createElement("td")
-               
-                function box(photo, name, mobile, batch, git, referby,referby1) {
-                    able(1, photo)
-                    able(2, name)
-                    able(3, mobile)
-                    able(4, batch)
-                    able(5, git)
-                    able(6, referby)
-                    able(7, referby1)
-                    function able(j,n) {
-                        td[j].append(n)
-                            console.log(td[j])
-                    }
-                }
-                tr[i].append(td[j])
-    }
-    table.append(tr[i])
-    //td.setAttribute("class","bor")
-   
+var tr = document.createElement('tr');
+var arrheader = ['photo', 'Name', 'mobile', 'batch', 'git', 'referby', 'location'];
+var array = [{
+    photo: 1,
+    Name: 'arunkumar',
+    mobile: '6374323635',
+    batch: 'FSD-10',
+    git:"arunnnj",
+    referby:"arun",
+    location:'chennai'
+  },
+  {
+    photo: 1,
+    Name: 'prem',
+    mobile: 'Ashiq',
+    batch: 'FSD-10',
+    git:"",
+    referby:"",
+    location:'chennai'
+  },
+  
+  {
+    photo: 1,
+    Name: 'pradeep',
+    mobile: 'Ashiq',
+    batch: 'FSD-10',
+    git:"VVVVVV",
+    referby:"MMM",
+    location:'chennai'
+  },
+  {
+    photo: 1,
+    Name: 'srikanh',
+    mobile: 'Ashiq',
+    batch: 'FSD-10',
+    git:"MMMMMMMM",
+    referby:"MMMMM",
+    location:'chennai'
+  }
+];
 
+for (var j = 0; j < arrheader.length; j++) {
+  var th = document.createElement('th'); //column
+  var text = document.createTextNode(arrheader[j]); //cell
+  th.setAttribute("class","bor")
+  th.appendChild(text);
+  tr.appendChild(th);
 }
-box("photo", "name", "mobile", "batch", "git", "referby","location")
-box("photo", "EDWINRAJ", "9361046327", "FSD-9", "zeddyy", "velmrgan-fsd8","chennai")  
-box("photo", "francis", "9500252669", "FSD-09", "FRANCISANIMH", "G.srya fsd 04","pavoorchathram")
-console.log(tr[i])
+table.appendChild(tr);
 
+for (var i = 0; i < array.length; i++) {
+  var tr = document.createElement('tr');
+var td=[ td1,td2,td3,td4,td5,td6]
+  var td1 = document.createElement('td');
+  var td2 = document.createElement('td');
+  var td3 = document.createElement('td');
+  var td4 = document.createElement('td');
+  var td5 = document.createElement('td');
+  var td6 = document.createElement('td');
+  var td7 = document.createElement('td');
 
-//tr.forEach(able)
+  var text1 = document.createTextNode(array[i]. photo);
+  var text2 = document.createTextNode(array[i].Name);
+  var text3 = document.createTextNode(array[i].mobile);
+  var text4 = document.createTextNode(array[i].batch);
+  var text5 = document.createTextNode(array[i].git);
+  var text6 = document.createTextNode(array[i].referby);
+  var text7 = document.createTextNode(array[i].location);
 
+  td1.appendChild(text1);
+  td2.appendChild(text2);
+  td3.appendChild(text3);
+  td4.appendChild(text4);
+  td5.appendChild(text5);
+  td6.appendChild(text6);
+  td7.appendChild(text7);
 
-
-
-//console.log(k)
-
-tablearea.appendChild(table);
+  tr.appendChild(td1);
+  tr.appendChild(td2);
+  tr.appendChild(td3);
+  tr.appendChild(td4);
+  tr.appendChild(td5);
+  tr.appendChild(td6);
+  tr.appendChild(td7);
+  table.setAttribute("class", "bor")
+  
+  td1.setAttribute("class","bor1")
+  
+  td2.setAttribute("class","bor")
+  td3.setAttribute("class","bor")
+  td4.setAttribute("class","bor")
+  td5.setAttribute("class","bor")
+  td6.setAttribute("class","bor")
+  td7.setAttribute("class","bor")
+  table.appendChild(tr);
+}
+document.body.appendChild(table);

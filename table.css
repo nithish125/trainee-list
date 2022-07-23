@@ -1,3 +1,11 @@
 .bor{
     border: 2px solid;
 }
+.bor1{
+    border: 2px solid;
+    background-image: url(./pradeep.jpg);
+    background-size: 70px;
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 100px;
+}
