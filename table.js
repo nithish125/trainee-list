@@ -1,6 +1,6 @@
 var table = document.createElement('table');
 var tr = document.createElement('tr');
-var arrheader = ['photo', 'Name', 'mobile', 'batch', 'git', 'referby', 'location'];
+var arrheader = ['photo', 'Name', 'mobile','batch', 'git', 'referby', 'location'];
 var array = [{
     photo: 1,
     Name: 'arunkumar',
@@ -21,7 +21,7 @@ var array = [{
   },
   
   {
-    photo: 1,
+    photo:1,
     Name: 'pradeep',
     mobile: 'Ashiq',
     batch: 'FSD-10',
@@ -68,6 +68,8 @@ var td=[ td1,td2,td3,td4,td5,td6]
   var text6 = document.createTextNode(array[i].referby);
   var text7 = document.createTextNode(array[i].location);
 
+  var img=document.createElement("img")
+  img.src=
   td1.appendChild(text1);
   td2.appendChild(text2);
   td3.appendChild(text3);
@@ -83,16 +85,9 @@ var td=[ td1,td2,td3,td4,td5,td6]
   tr.appendChild(td5);
   tr.appendChild(td6);
   tr.appendChild(td7);
-  table.setAttribute("class", "bor")
-  
-  td1.setAttribute("class","bor1")
-  
-  td2.setAttribute("class","bor")
-  td3.setAttribute("class","bor")
-  td4.setAttribute("class","bor")
-  td5.setAttribute("class","bor")
-  td6.setAttribute("class","bor")
-  td7.setAttribute("class","bor")
+
+  table.setAttribute("border", "2px solid")
+
   table.appendChild(tr);
 }
 document.body.appendChild(table);
